@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Espresso Demo</string>
+    <string name="default_number">0</string>
+    <string name="ready">I\'m Ready</string>
 </resources>
