@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -43,11 +45,20 @@ public class ScrollActivity extends AppCompatActivity {
     }
 
     public void populateScrollView() {
-        for (int i = 0; i < mainScreenNumber; i++) {
+        for (int i = 1; i <= mainScreenNumber; i++) {
             TextView newTv = new TextView(this);
             newTv.setText(Integer.toString(i));
             newTv.setHeight(500);
-            newTv.setTextColor(getResources().getColor(R.color.colorPrimary));
+            newTv.setTextColor(getResources().getColor(R.color.white));
+            newTv.setGravity(Gravity.CENTER);
+            newTv.setTextSize(36);
+
+            LinearLayout.LayoutParams marginParams =
+                    new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT);
+            marginParams.setMargins(10, 10, 10, 10);
+            newTv.setLayoutParams(marginParams);
+
             if (mColorConfig == ColorConfig.BLUE) {
                 newTv.setBackgroundColor(getResources().getColor(R.color.blue));
             } else {
