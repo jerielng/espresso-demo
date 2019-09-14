@@ -64,6 +64,9 @@ public class ScrollActivity extends AppCompatActivity {
             } else {
                 newTv.setBackgroundColor(getResources().getColor(R.color.red));
             }
+            if (i == mainScreenNumber) {
+                newTv.setId(R.id.last_view);
+            }
             mScrollLayout.addView(newTv);
         }
     }
