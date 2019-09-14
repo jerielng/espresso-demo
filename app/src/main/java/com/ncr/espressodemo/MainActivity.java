@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mIncrementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNumberCounter.increment();
+                mNumberCounter.duplicate();
                 mNumberTv.setText(Integer.toString(mNumberCounter.getNumber()));
             }
         });

@@ -5,11 +5,11 @@ public class NumberCounter {
     private int number;
 
     public NumberCounter() {
-        number = 0;
+        number = 1;
     }
 
-    public void increment() {
-        number++;
+    public void duplicate() {
+        number += number;
     }
 
     public void decrement() {
